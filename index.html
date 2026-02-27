@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRANDNAME — Google Workspace Add-ons</title>
+    <meta name="description" content="Simple, powerful add-ons for Google Sheets. Notifications, health checks, and more. Trusted by thousands of users.">
+    <link rel="canonical" href="https://YOURDOMAIN.com">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: #1a1a2e;
+            background: #fff;
+            line-height: 1.6;
+        }
+
+        /* NAV */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+        .logo {
+            font-size: 22px;
+            font-weight: 800;
+            color: #1a1a2e;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+        .logo span { color: #107cc3; }
+        nav .nav-links a {
+            color: #555;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            margin-left: 24px;
+        }
+        nav .nav-links a:hover { color: #107cc3; }
+
+        /* HERO */
+        .hero {
+            text-align: center;
+            padding: 60px 24px 40px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .hero h1 {
+            font-size: 42px;
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+        .hero h1 span { color: #107cc3; }
+        .hero p {
+            font-size: 18px;
+            color: #555;
+            max-width: 540px;
+            margin: 0 auto;
+        }
+
+        /* ADDONS GRID */
+        .addons {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 40px 24px 60px;
+        }
+        .section-label {
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #107cc3;
+            margin-bottom: 24px;
+        }
+        .addon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .addon-card {
+            border: 1px solid #e8eaed;
+            border-radius: 12px;
+            padding: 28px 24px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+        .addon-card:hover {
+            border-color: #107cc3;
+            box-shadow: 0 4px 24px rgba(16, 124, 195, 0.08);
+            transform: translateY(-2px);
+        }
+        .addon-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin-bottom: 16px;
+        }
+        .addon-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .addon-card p {
+            font-size: 14px;
+            color: #666;
+            flex: 1;
+            margin-bottom: 16px;
+        }
+        .addon-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 600;
+            align-self: flex-start;
+        }
+        .badge-live { background: #e6f4ea; color: #137333; }
+        .badge-soon { background: #fef7e0; color: #b06000; }
+        .badge-new { background: #e8f0fe; color: #1a73e8; }
+
+        /* ABOUT */
+        .about {
+            background: #f8f9fa;
+            padding: 60px 24px;
+        }
+        .about-inner {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .about-inner h2 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        .about-inner p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 12px;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 40px 24px;
+            font-size: 13px;
+            color: #999;
+            border-top: 1px solid #e8eaed;
+        }
+        footer a {
+            color: #666;
+            text-decoration: none;
+            margin: 0 12px;
+        }
+        footer a:hover { color: #333; }
+
+        @media (max-width: 640px) {
+            .hero h1 { font-size: 32px; }
+            .addon-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="/" class="logo"><span>BRAND</span>NAME</a>
+        <div class="nav-links">
+            <a href="#addons">Add-ons</a>
+            <a href="#about">About</a>
+            <a href="mailto:support@YOURDOMAIN.com">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Simple, powerful tools for <span>Google Workspace</span></h1>
+        <p>Add-ons that solve one problem well. No bloat, no complexity. Install and go.</p>
+    </section>
+
+    <section class="addons" id="addons">
+        <div class="section-label">Our Add-ons</div>
+        <div class="addon-grid">
+
+            <!-- NOTIFICATIONS FOR GOOGLE SHEETS -->
+            <a href="/notifications/" class="addon-card">
+                <div class="addon-icon" style="background: #e8f0fe;">🔔</div>
+                <h3>Notifications for Google Sheets</h3>
+                <p>Send Slack, Discord, or Google Chat notifications when your spreadsheet changes. Conditional rules, custom templates, 60-second setup. No Zapier needed.</p>
+                <span class="addon-badge badge-new">New</span>
+            </a>
+
+            <!-- SHEET HEALTH CHECK -->
+            <a href="/sheet-health-check/" class="addon-card">
+                <div class="addon-icon" style="background: #e6f4ea;">🩺</div>
+                <h3>Sheet Health Check</h3>
+                <p>One-click spreadsheet auditor. Scans for formula errors, inconsistencies, hardcoded values, and performance issues. Click-to-navigate to every issue.</p>
+                <span class="addon-badge badge-live">Live</span>
+            </a>
+
+            <!-- FUTURE ADD-ON PLACEHOLDER -->
+            <!--
+            <a href="/next-addon/" class="addon-card">
+                <div class="addon-icon" style="background: #fef7e0;">⚡</div>
+                <h3>Next Add-on</h3>
+                <p>Description of your next add-on goes here.</p>
+                <span class="addon-badge badge-soon">Coming Soon</span>
+            </a>
+            -->
+
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-inner">
+            <h2>Built for people who live in spreadsheets</h2>
+            <p>We build focused Google Workspace add-ons that do one thing exceptionally well. Each tool is designed to set up in under a minute, work reliably in the background, and cost a fraction of enterprise alternatives.</p>
+            <p>No external servers. No bloat. Your data stays in Google's ecosystem.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 BRANDNAME</p>
+        <p style="margin-top: 8px;">
+            <a href="mailto:support@YOURDOMAIN.com">Contact</a>
+        </p>
+    </footer>
+
+</body>
+</html>
