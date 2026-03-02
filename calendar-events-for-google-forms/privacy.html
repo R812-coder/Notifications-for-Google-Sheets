@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — Calendar Events for Google Forms</title>
+    <meta name="description" content="Privacy Policy for Calendar Events for Google Forms, a Google Workspace add-on by BrightDesk.">
+    <link rel="canonical" href="https://brightdesk.dev/calendar-events-for-google-forms/privacy.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #FAFAF9;
+            --surface: #FFFFFF;
+            --text: #1C1917;
+            --text-secondary: #57534E;
+            --accent: #2563EB;
+            --border: #E7E5E4;
+            --font: 'DM Sans', -apple-system, sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: var(--font);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+        nav {
+            border-bottom: 1px solid var(--border);
+            padding: 16px 24px;
+            background: var(--surface);
+        }
+        nav a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        main {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 60px 24px 100px;
+        }
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 8px;
+        }
+        .last-updated {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+        }
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-top: 36px;
+            margin-bottom: 12px;
+        }
+        p {
+            margin-bottom: 16px;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+        ul {
+            margin: 0 0 16px 24px;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+        li { margin-bottom: 6px; }
+        a { color: var(--accent); }
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 24px;
+            text-align: center;
+            background: var(--surface);
+        }
+        footer p {
+            font-size: 0.8rem;
+            color: #A8A29E;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html">&larr; Calendar Events for Google Forms</a>
+</nav>
+
+<main>
+    <h1>Privacy Policy</h1>
+    <p class="last-updated">Last updated: March 2, 2026</p>
+
+    <p>Calendar Events for Google Forms ("the Add-on") is a Google Workspace&#8482; add-on developed and operated by BrightDesk ("we," "us," or "our"). This privacy policy explains how the Add-on handles your data.</p>
+
+    <h2>What data the Add-on accesses</h2>
+    <p>The Add-on accesses the following data in order to function:</p>
+    <ul>
+        <li><strong>Google Forms&#8482; data:</strong> The Add-on reads the structure of the Google Form&#8482; it is installed on (question titles and types) so you can map form fields to calendar event properties. When a form response is submitted, the Add-on reads the response data (answers to mapped fields only) to create a calendar event.</li>
+        <li><strong>Google Calendar&#8482; data:</strong> The Add-on lists your available calendars so you can select a target calendar. It creates events on the selected calendar and may read existing events to check for scheduling conflicts.</li>
+        <li><strong>Configuration data:</strong> Your field mapping settings, calendar selection, timezone preference, and other configuration choices are stored using Google Apps Script's PropertiesService, which resides within Google's infrastructure.</li>
+    </ul>
+
+    <h2>How data is used</h2>
+    <p>Form response data is used solely to create Google Calendar&#8482; events based on your field mapping configuration. The Add-on reads form answers for the fields you have mapped (such as event title, date, time, location, description, and guest email) and passes them to the Google Calendar&#8482; API to create an event.</p>
+
+    <h2>Data storage and retention</h2>
+    <ul>
+        <li>The Add-on does <strong>not</strong> store form response data externally. Form data is read at the time of submission, used to create a calendar event, and not retained by the Add-on.</li>
+        <li>Configuration settings (field mappings, calendar selection, timezone) are stored in Google Apps Script's PropertiesService, which resides within Google's infrastructure and is bound to the form document.</li>
+        <li>A log of recent event creation activity (event title, date, success/failure status) is stored in PropertiesService for display in the sidebar dashboard. This log is limited to the most recent 20 entries and is stored within Google's infrastructure.</li>
+    </ul>
+
+    <h2>Data sharing with third parties</h2>
+    <p>The Add-on does <strong>not</strong> send any data to external servers, third-party services, or any infrastructure outside of Google's platform. All data processing occurs within Google Apps Script and Google's APIs. We do not sell, rent, or share your data with any third parties.</p>
+
+    <h2>Permissions (OAuth scopes)</h2>
+    <p>The Add-on requests the following permissions:</p>
+    <ul>
+        <li><strong>View and manage forms that this application has been installed in:</strong> Required to read form question structure for field mapping and to read form responses when submissions occur.</li>
+        <li><strong>View and manage your Google Calendar&#8482;:</strong> Required to create calendar events, list your calendars for target selection, and check for scheduling conflicts.</li>
+        <li><strong>Display content in the Google Workspace&#8482; sidebar:</strong> Required to show the configuration sidebar in the Google Forms&#8482; editor.</li>
+        <li><strong>Allow this application to run when you are not present:</strong> Required to create the installable trigger that processes form submissions automatically.</li>
+    </ul>
+
+    <h2>Data security</h2>
+    <p>All data processing occurs within Google's infrastructure using Google Apps Script. We do not operate external servers or databases. Your data is protected by Google's security infrastructure and your Google account credentials.</p>
+
+    <h2>Your rights and data deletion</h2>
+    <p>You can revoke the Add-on's access to your data at any time by uninstalling it from your Google Form&#8482;. Uninstalling removes the installable trigger and the configuration data stored in PropertiesService. You can also revoke permissions from your Google Account's security settings at <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">myaccount.google.com/permissions</a>.</p>
+
+    <h2>Children's privacy</h2>
+    <p>The Add-on is not directed at children under 13. We do not knowingly collect personal information from children under 13.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>We may update this privacy policy from time to time. Changes will be reflected on this page with an updated "Last updated" date.</p>
+
+    <h2>Contact</h2>
+    <p>If you have questions about this privacy policy or the Add-on's data practices, contact us at <a href="mailto:support-formcal@googlegroups.com">support-formcal@googlegroups.com</a>.</p>
+</main>
+
+<footer>
+    <p>Google Workspace&#8482;, Google Forms&#8482;, and Google Calendar&#8482; are trademarks of Google LLC. Calendar Events for Google Forms is not affiliated with or endorsed by Google LLC.</p>
+</footer>
+
+</body>
+</html>
