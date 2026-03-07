@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upgrade to Pro — Timesheet for Google Calendar</title>
+    <meta name="description" content="Upgrade Timesheet for Google Calendar to Pro. Unlimited calendars, date ranges, color mappings, keyword rules, and full reporting for $39/year.">
+    <link rel="canonical" href="https://brightdesk.dev/timesheet-for-google-calendar/checkout/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-bg: #fafaf9;
+            --color-surface: #ffffff;
+            --color-text: #1c1917;
+            --color-text-secondary: #57534e;
+            --color-text-muted: #a8a29e;
+            --color-border: #e7e5e4;
+            --color-accent: #2563eb;
+            --color-accent-hover: #1d4ed8;
+            --color-green: #16a34a;
+            --font-body: 'DM Sans', sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: var(--font-body);
+            background: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        nav {
+            background: rgba(250,250,249,0.9);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--color-border);
+            padding: 0.875rem 1.5rem;
+        }
+        .nav-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.625rem;
+            text-decoration: none;
+            color: var(--color-text);
+        }
+        .nav-brand-icon {
+            width: 32px; height: 32px;
+            background: var(--color-accent);
+            border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .nav-brand-icon svg { width: 18px; height: 18px; }
+        .nav-brand span { font-weight: 600; font-size: 0.95rem; }
+        .nav-back {
+            text-decoration: none;
+            color: var(--color-text-secondary);
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        .nav-back:hover { color: var(--color-text); }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 4rem;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+        }
+        .subtitle {
+            color: var(--color-text-secondary);
+            font-size: 1.05rem;
+            margin-bottom: 2.5rem;
+        }
+
+        /* Pricing cards */
+        .plans {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem;
+            margin-bottom: 2.5rem;
+        }
+        .plan {
+            background: var(--color-surface);
+            border: 2px solid var(--color-border);
+            border-radius: 14px;
+            padding: 2rem 1.5rem;
+            text-align: left;
+            position: relative;
+        }
+        .plan.recommended {
+            border-color: var(--color-accent);
+            box-shadow: 0 4px 24px rgba(37,99,235,0.1);
+        }
+        .plan-badge {
+            position: absolute;
+            top: -11px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--color-accent);
+            color: #fff;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 3px 14px;
+            border-radius: 100px;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+        .plan-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+        .plan-price {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.125rem;
+        }
+        .plan-price .period {
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: var(--color-text-secondary);
+        }
+        .plan-price-sub {
+            font-size: 0.8rem;
+            color: var(--color-text-muted);
+            margin-bottom: 1.25rem;
+        }
+        .plan-features {
+            list-style: none;
+            padding: 0;
+        }
+        .plan-features li {
+            font-size: 0.875rem;
+            color: var(--color-text-secondary);
+            padding: 0.3rem 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+        .plan-features li .icon {
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .check { color: var(--color-green); }
+        .dash { color: var(--color-text-muted); }
+
+        .btn-checkout {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            width: 100%;
+            padding: 0.875rem 2rem;
+            background: var(--color-accent);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            font-family: inherit;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.15s, transform 0.1s;
+            margin-top: 1.25rem;
+            box-shadow: 0 1px 3px rgba(37,99,235,0.3);
+        }
+        .btn-checkout:hover { background: var(--color-accent-hover); transform: translateY(-1px); }
+        .btn-checkout svg { width: 18px; height: 18px; }
+
+        .btn-free {
+            display: block;
+            width: 100%;
+            padding: 0.75rem;
+            background: none;
+            border: 1px solid var(--color-border);
+            border-radius: 10px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            font-family: inherit;
+            color: var(--color-text-secondary);
+            cursor: default;
+            margin-top: 1.25rem;
+            text-align: center;
+        }
+
+        /* Trust */
+        .trust {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 0.375rem;
+            font-size: 0.8rem;
+            color: var(--color-text-secondary);
+        }
+        .trust-item svg { width: 16px; height: 16px; color: var(--color-green); }
+
+        /* FAQ */
+        .faq {
+            max-width: 560px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .faq h2 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .faq-item {
+            border-bottom: 1px solid var(--color-border);
+            padding: 1rem 0;
+        }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-q {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.375rem;
+        }
+        .faq-a {
+            font-size: 0.85rem;
+            color: var(--color-text-secondary);
+            line-height: 1.6;
+        }
+
+        footer {
+            border-top: 1px solid var(--color-border);
+            padding: 1.5rem;
+            text-align: center;
+        }
+        .footer-text {
+            font-size: 0.75rem;
+            color: var(--color-text-muted);
+            max-width: 640px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+        .footer-text a { color: var(--color-text-secondary); text-decoration: none; }
+
+        @media (max-width: 640px) {
+            .plans { grid-template-columns: 1fr; }
+            h1 { font-size: 1.5rem; }
+            .trust { gap: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="../" class="nav-brand">
+            <div class="nav-brand-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <span>Timesheet for Google Calendar</span>
+        </a>
+        <a href="../" class="nav-back">&larr; Back</a>
+    </div>
+</nav>
+
+<div class="content">
+    <h1>Choose your plan</h1>
+    <p class="subtitle">Start free, upgrade when you need more.</p>
+
+    <div class="plans">
+        <!-- FREE -->
+        <div class="plan">
+            <div class="plan-name">Free</div>
+            <div class="plan-price">$0</div>
+            <div class="plan-price-sub">Free forever</div>
+            <ul class="plan-features">
+                <li><span class="icon check">&#10003;</span> 1 calendar</li>
+                <li><span class="icon check">&#10003;</span> 2-week date range</li>
+                <li><span class="icon check">&#10003;</span> 3 color mappings</li>
+                <li><span class="icon check">&#10003;</span> 3 keyword rules</li>
+                <li><span class="icon check">&#10003;</span> Timesheet tab</li>
+                <li><span class="icon check">&#10003;</span> Quarter-hour rounding</li>
+                <li><span class="icon dash">&mdash;</span> Summary tab</li>
+                <li><span class="icon dash">&mdash;</span> Review tab (error detection)</li>
+                <li><span class="icon dash">&mdash;</span> Description parsing</li>
+                <li><span class="icon dash">&mdash;</span> No branding footer</li>
+            </ul>
+            <div class="btn-free">Current plan</div>
+        </div>
+
+        <!-- PRO -->
+        <div class="plan recommended">
+            <div class="plan-badge">Recommended</div>
+            <div class="plan-name">Pro</div>
+            <div class="plan-price">$39 <span class="period">/ year</span></div>
+            <div class="plan-price-sub">That's $3.25/month &mdash; less than one billable hour</div>
+            <ul class="plan-features">
+                <li><span class="icon check">&#10003;</span> <strong>Unlimited</strong> calendars</li>
+                <li><span class="icon check">&#10003;</span> <strong>Unlimited</strong> date range</li>
+                <li><span class="icon check">&#10003;</span> <strong>All 11</strong> color mappings</li>
+                <li><span class="icon check">&#10003;</span> <strong>Unlimited</strong> keyword rules</li>
+                <li><span class="icon check">&#10003;</span> Timesheet tab</li>
+                <li><span class="icon check">&#10003;</span> Configurable rounding</li>
+                <li><span class="icon check">&#10003;</span> <strong>Summary tab</strong> (project totals)</li>
+                <li><span class="icon check">&#10003;</span> <strong>Review tab</strong> (billing error detection)</li>
+                <li><span class="icon check">&#10003;</span> <strong>Description parsing</strong> (notes field)</li>
+                <li><span class="icon check">&#10003;</span> <strong>No branding</strong> footer</li>
+            </ul>
+
+            <!-- ============================================
+                 REPLACE THIS URL WITH YOUR STRIPE PAYMENT LINK
+                 ============================================ -->
+            <a href="https://buy.stripe.com/REPLACE_WITH_YOUR_PAYMENT_LINK"
+               class="btn-checkout" target="_blank">
+                Upgrade to Pro
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+        </div>
+    </div>
+
+    <!-- Trust signals -->
+    <div class="trust">
+        <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Secure payment via Stripe
+        </div>
+        <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            14-day money-back guarantee
+        </div>
+        <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Cancel anytime
+        </div>
+    </div>
+
+    <!-- Already have a key? -->
+    <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 2.5rem;">
+        Already have a license key? Open the add-on sidebar &rarr; Settings tab &rarr; paste your key.
+    </p>
+
+    <!-- FAQ -->
+    <div class="faq">
+        <h2>Questions</h2>
+
+        <div class="faq-item">
+            <div class="faq-q">How do I receive my license key?</div>
+            <div class="faq-a">After payment, you'll be redirected to a confirmation page. Your license key will be emailed to you, usually within a few hours. Paste it in the add-on sidebar under Settings to activate Pro.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q">Can I use the key on multiple spreadsheets?</div>
+            <div class="faq-a">Yes. Your license is tied to your Google account, not a specific spreadsheet. Once activated, Pro works across all your spreadsheets.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q">What happens when my subscription renews?</div>
+            <div class="faq-a">You'll receive a new license key by email each year. Just paste the new key to extend your Pro access.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q">What if I'm not satisfied?</div>
+            <div class="faq-a">Full refund within 14 days, no questions asked. Email support-calendartimesheet@googlegroups.com.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q">How do I cancel?</div>
+            <div class="faq-a">You can cancel anytime from the <a href="./manage/" style="color: var(--color-accent);">subscription management page</a> or by emailing support. Your Pro access continues until the end of the billing period.</div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p class="footer-text">
+        <a href="../privacy/">Privacy Policy</a> &middot; <a href="../terms/">Terms of Service</a> &middot; <a href="mailto:support-calendartimesheet@googlegroups.com">Support</a>
+        <br>Google Calendar&trade; and Google Sheets&trade; are trademarks of Google LLC. &copy; 2026 BrightDesk.
+    </p>
+</footer>
+
+</body>
+</html>
